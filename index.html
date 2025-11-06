@@ -119,8 +119,22 @@
         /* Skills */
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
+        }
+        
+        /* For tablet */
+        @media (max-width: 1024px) {
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* For mobile */
+        @media (max-width: 768px) {
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         .skill-category h3 {
